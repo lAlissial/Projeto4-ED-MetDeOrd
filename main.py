@@ -126,7 +126,9 @@ print(f'*' * 50)
 
 while True:
     resp = menu(["BubbleSort", "InsertionSort", "ShellSort", "QuickSort", "MergeSort", "Todos juntos", "Sair do Sistema"],"MENU PRINCIPAL")
+    
     listazita = listinha.copy()
+    
     if resp == 1:
       printazito(bubbleSort, 'BubbleSort', listazita, 6, 32)
 
