@@ -35,7 +35,7 @@ def shellSort(lista):
     aux //= 2
 
 
-def partezita(lista, co, fi):
+def partezitaDoQuick(lista, co, fi):
   i = (co - 1)
   pivot = lista[fi]
 
@@ -47,17 +47,16 @@ def partezita(lista, co, fi):
   lista[i + 1], lista[fi] = lista[fi], lista[i + 1]
   return (i + 1)
 
-
 def quickSort(lista, co, fi):
   if len(lista) == 1:
     return lista
   if co < fi:
-    pi = partezita(lista, co, fi)
+    pi = partezitaDoQuick(lista, co, fi)
 
     quickSort(lista, co, pi - 1)
     quickSort(lista, pi + 1, fi)
 
-
+    
 def mergeSort(lista):
   taman = len(lista)
   if taman > 1:
